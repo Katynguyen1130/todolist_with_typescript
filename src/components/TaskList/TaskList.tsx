@@ -21,8 +21,10 @@ export default function TaskList(props: TaskListProps) {
     }
 
     return (
-        <div>
-            <h2 className={styles.title}>
+        <div style={{
+            "marginTop": "50px"
+        }}>
+            <h2 className={!done ? `${styles.title}` : `${styles.title} ${styles.titleDone}`}>
                 {done ? "Finished" : "To Do"}
             </h2>
             <div className={styles.tasks}>
@@ -30,7 +32,7 @@ export default function TaskList(props: TaskListProps) {
                     return (
                         <div className={styles.task} key={task.id}>
                             <input type="checkbox" checked={task.finished} onChange={handleFinishStatus(task.id)} />
-                            <span className={styles.taskname}> {task.name} </span>
+                            <span className={done ? styles.tasknameDone : styles.taskname}> {task.name} </span>
                             <div className={styles.taskActions}>
                                 <button className={styles.taskBtn} onClick={() => { getCurrentTask(task.id) }}>
                                     🖋️
@@ -45,7 +47,7 @@ export default function TaskList(props: TaskListProps) {
                 })}
 
             </div>
-        </div>
+        </div >
     )
 }
 

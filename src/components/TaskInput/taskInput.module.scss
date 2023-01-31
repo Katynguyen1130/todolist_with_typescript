@@ -4,30 +4,38 @@
 
 .title {
     font-size: 32px;
-    color: black;
-    font-weight: 500;
+    color: #14adbd;
+    font-weight: 700;
     padding: 10px 0;
     text-align: center;
     margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
 .form {
     display: flex;
     width: 100%;
 
-
+    .checkbox {
+        border: 6px solid #14adbd;
+        color: red;
+    }
 
     input {
         flex: 1;
         height: 50px;
-        border-color: aquamarine;
+        border: 2px solid #14adbd;
         border-radius: 5px;
         padding-left: 5px;
+        max-width: 95%;
+
     }
 
     button {
         margin-left: 10px;
         width: 50px;
         border-radius: 5px;
+        color: #fff;
+        border: 2px solid #14adbd;
     }
 }

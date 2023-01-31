@@ -1,8 +1,12 @@
 .title {
-    font-size: 20px;
-    color: black;
-    font-weight: 500;
+    font-size: 24px;
+    color: #14adbd;
+    font-weight: 700;
     margin: 10px 0;
+}
+
+.titleDone {
+    color: black;
 }
 
 .tasks {
@@ -15,12 +19,18 @@
         flex-direction: row;
 
 
+
+
         .taskname {
             flex: 1;
+            max-width: 90%;
+            color: #1f8b97;
+            font-weight: 500;
+
         }
 
         .tasknameDone {
-
+            flex: 1;
             color: grey;
             text-decoration: line-through;
         }
@@ -34,6 +44,7 @@
 
         button {
             margin-left: 10px;
+
         }
     }
 }
