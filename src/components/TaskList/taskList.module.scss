@@ -1,0 +1,39 @@
+.title {
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+
+    .task {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+
+
+        .taskname {
+            flex: 1;
+        }
+
+        .tasknameDone {
+
+            color: grey;
+            text-decoration: line-through;
+        }
+
+        input {
+            margin-right: 10px;
+            flex: 0 0 3%;
+            ;
+
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    }
+}
