@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import propTypes from 'prop-types';
 import styles from './taskList.module.scss';
-import { Task } from '../../@types/task.type'
+import { Task } from '../../@types/task.type';
+import { TaskType } from '../../Proptype/task.proptypes';
+
 
 interface TaskListProps {
     done: boolean,
@@ -44,4 +47,12 @@ export default function TaskList(props: TaskListProps) {
             </div>
         </div>
     )
+}
+
+TaskList.propTypes = {
+    done: propTypes.bool,
+    TaskList: propTypes.arrayOf(TaskType),
+    toggleTodoStatus: propTypes.func,
+    getCurrentTask: propTypes.func,
+    deleteTask: propTypes.func,
 }

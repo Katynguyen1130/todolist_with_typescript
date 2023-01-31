@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import styles from './taskInput.module.scss';
+import propTypes from 'prop-types';
+
 import { Task } from '../../@types/task.type'
+
+import styles from './taskInput.module.scss';
+import { TaskType } from '../../Proptype/task.proptypes';
 
 
 interface TaskInputProps {
@@ -56,7 +60,10 @@ export default function TaskInput(props: TaskInputProps) {
         </div>
     )
 }
-function editTask(value: string) {
-    throw new Error('Function not implemented.');
-}
 
+TaskInput.propTypes = {
+    addTask: propTypes.func.isRequired,
+    editTask: propTypes.func.isRequired,
+    finishEditTask: propTypes.func.isRequired,
+    currentTask: propTypes.oneOf([TaskType, propTypes.oneOf([null])]),
+}
